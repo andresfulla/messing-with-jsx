@@ -1,54 +1,19 @@
-/**
- * A number, or a string containing a number.
- * @typedef {Object} VNode
- * @property {string} nodeName
- * @property {Object.<string>} attributes
- * @property {Object} children
- */
+import { renderer } from './src/renderer'
 
-/**
- * This function simply renders a JSX tree
- *
- * @param {VNode} vnode
- * @returns
- */
-function renderer(vnode) {
-  // creates a DOM element
-  if (vnode.split) return document.createTextNode(vnode)
-  let newElem = document.createElement(vnode.nodeName)
-  // grabs and sets all attributes to the new DOM element
-  let attributes = vnode.attributes || {} 
-  Object.keys(attributes).forEach((attr) => {
-    newElem.setAttribute(attr, attributes[attr])
-  });
-  // recursion for every fild it has
-  const children = (vnode.children || [])
-  children.forEach(child => {
-    const childElem = renderer(child)
-    newElem.appendChild(childElem)
-  })
-
-  return newElem
+const Title = (props) => {
+  return (<h1 class={props.class}>{ props.children }</h1>)
 }
 
-const title = (<h1>Cosas locas</h1>)
+const Subtitle = (props) => <p class="subtitle">{ props.children }</p>
 
-const element = (<div>{ title }</div>)
+const element = (
+  <div>
+    <Title class="red">Fantastic</Title>
+    <Subtitle>Cosas</Subtitle>
+    <p>Cosas raras raras</p>
+  </div>
+)
 
 let dom = renderer(element);
 
 document.body.appendChild(dom)
-
-/**
- * Transforms a JSX set of parms into a VNode elem
- *
- * @param {string} nodeName
- * @param {Object} attributes
- * @param {Array<string|VNode>} args
- * @returns {VNode}
- */
-function h(nodeName, attributes, ...args) {
-  let children = args.length ? [].concat(...args) : null;
-  console.log(children)
-	return { nodeName, attributes, children };
-}

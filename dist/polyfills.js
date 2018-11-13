@@ -81,20 +81,20 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./h.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./index.js":
-/*!******************!*\
-  !*** ./index.js ***!
-  \******************/
+/***/ "./h.js":
+/*!**************!*\
+  !*** ./h.js ***!
+  \**************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_renderer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./src/renderer */ \"./src/renderer.js\");\n\n\nvar Title = function Title(props) {\n  return h(\"h1\", {\n    class: props.class\n  }, props.children);\n};\n\nvar Subtitle = function Subtitle(props) {\n  return h(\"p\", {\n    class: \"subtitle\"\n  }, props.children);\n};\n\nvar element = h(\"div\", null, h(Title, {\n  class: \"red\"\n}, \"Fantastic\"), h(Subtitle, null, \"Cosas\"), h(\"p\", null, \"Cosas raras raras\"));\nvar dom = Object(_src_renderer__WEBPACK_IMPORTED_MODULE_0__[\"renderer\"])(element);\ndocument.body.appendChild(dom);\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var core_js_modules_es6_array_for_each__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es6.array.for-each */ \"./node_modules/core-js/modules/es6.array.for-each.js\");\n/* harmony import */ var core_js_modules_es6_array_for_each__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_array_for_each__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var core_js_modules_es6_array_filter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es6.array.filter */ \"./node_modules/core-js/modules/es6.array.filter.js\");\n/* harmony import */ var core_js_modules_es6_array_filter__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_array_filter__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ \"./node_modules/core-js/modules/web.dom.iterable.js\");\n/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es6.array.iterator */ \"./node_modules/core-js/modules/es6.array.iterator.js\");\n/* harmony import */ var core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var core_js_modules_es6_object_keys__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es6.object.keys */ \"./node_modules/core-js/modules/es6.object.keys.js\");\n/* harmony import */ var core_js_modules_es6_object_keys__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_object_keys__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var core_js_modules_es6_object_define_property__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! core-js/modules/es6.object.define-property */ \"./node_modules/core-js/modules/es6.object.define-property.js\");\n/* harmony import */ var core_js_modules_es6_object_define_property__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_object_define_property__WEBPACK_IMPORTED_MODULE_5__);\n\n\n\n\n\n\n\nfunction _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; var ownKeys = Object.keys(source); if (typeof Object.getOwnPropertySymbols === 'function') { ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) { return Object.getOwnPropertyDescriptor(source, sym).enumerable; })); } ownKeys.forEach(function (key) { _defineProperty(target, key, source[key]); }); } return target; }\n\nfunction _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }\n\n/**\n * Transforms a JSX set of parms into a VNode elem\n *\n * @param {string} nodeName\n * @param {Object} attributes\n * @param {Array<string|VNode>} args\n * @returns {VNode}\n */\nfunction h(nodeName, attributes) {\n  var _ref;\n\n  for (var _len = arguments.length, args = new Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {\n    args[_key - 2] = arguments[_key];\n  }\n\n  if (typeof nodeName === 'function') {\n    return nodeName(_objectSpread({}, attributes, {\n      children: args\n    }));\n  }\n\n  var children = args.length ? (_ref = []).concat.apply(_ref, args) : null;\n  return {\n    nodeName: nodeName,\n    attributes: attributes,\n    children: children\n  };\n}\n\nwindow.h = h;\n\n//# sourceURL=webpack:///./h.js?");
 
 /***/ }),
 
@@ -274,18 +274,6 @@ eval("module.exports = function (exec) {\n  try {\n    return !!exec();\n  } cat
 
 /***/ }),
 
-/***/ "./node_modules/core-js/modules/_fix-re-wks.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/core-js/modules/_fix-re-wks.js ***!
-  \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-eval("\n\nvar hide = __webpack_require__(/*! ./_hide */ \"./node_modules/core-js/modules/_hide.js\");\n\nvar redefine = __webpack_require__(/*! ./_redefine */ \"./node_modules/core-js/modules/_redefine.js\");\n\nvar fails = __webpack_require__(/*! ./_fails */ \"./node_modules/core-js/modules/_fails.js\");\n\nvar defined = __webpack_require__(/*! ./_defined */ \"./node_modules/core-js/modules/_defined.js\");\n\nvar wks = __webpack_require__(/*! ./_wks */ \"./node_modules/core-js/modules/_wks.js\");\n\nmodule.exports = function (KEY, length, exec) {\n  var SYMBOL = wks(KEY);\n  var fns = exec(defined, SYMBOL, ''[KEY]);\n  var strfn = fns[0];\n  var rxfn = fns[1];\n\n  if (fails(function () {\n    var O = {};\n\n    O[SYMBOL] = function () {\n      return 7;\n    };\n\n    return ''[KEY](O) != 7;\n  })) {\n    redefine(String.prototype, KEY, strfn);\n    hide(RegExp.prototype, SYMBOL, length == 2 // 21.2.5.8 RegExp.prototype[@@replace](string, replaceValue)\n    // 21.2.5.11 RegExp.prototype[@@split](string, limit)\n    ? function (string, arg) {\n      return rxfn.call(string, this, arg);\n    } // 21.2.5.6 RegExp.prototype[@@match](string)\n    // 21.2.5.9 RegExp.prototype[@@search](string)\n    : function (string) {\n      return rxfn.call(string, this);\n    });\n  }\n};\n\n//# sourceURL=webpack:///./node_modules/core-js/modules/_fix-re-wks.js?");
-
-/***/ }),
-
 /***/ "./node_modules/core-js/modules/_global.js":
 /*!*************************************************!*\
   !*** ./node_modules/core-js/modules/_global.js ***!
@@ -371,17 +359,6 @@ eval("// 7.2.2 IsArray(argument)\nvar cof = __webpack_require__(/*! ./_cof */ \"
 /***/ (function(module, exports) {
 
 eval("module.exports = function (it) {\n  return typeof it === 'object' ? it !== null : typeof it === 'function';\n};\n\n//# sourceURL=webpack:///./node_modules/core-js/modules/_is-object.js?");
-
-/***/ }),
-
-/***/ "./node_modules/core-js/modules/_is-regexp.js":
-/*!****************************************************!*\
-  !*** ./node_modules/core-js/modules/_is-regexp.js ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("// 7.2.8 IsRegExp(argument)\nvar isObject = __webpack_require__(/*! ./_is-object */ \"./node_modules/core-js/modules/_is-object.js\");\n\nvar cof = __webpack_require__(/*! ./_cof */ \"./node_modules/core-js/modules/_cof.js\");\n\nvar MATCH = __webpack_require__(/*! ./_wks */ \"./node_modules/core-js/modules/_wks.js\")('match');\n\nmodule.exports = function (it) {\n  var isRegExp;\n  return isObject(it) && ((isRegExp = it[MATCH]) !== undefined ? !!isRegExp : cof(it) == 'RegExp');\n};\n\n//# sourceURL=webpack:///./node_modules/core-js/modules/_is-regexp.js?");
 
 /***/ }),
 
@@ -674,6 +651,18 @@ eval("var store = __webpack_require__(/*! ./_shared */ \"./node_modules/core-js/
 
 /***/ }),
 
+/***/ "./node_modules/core-js/modules/es6.array.filter.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/core-js/modules/es6.array.filter.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nvar $export = __webpack_require__(/*! ./_export */ \"./node_modules/core-js/modules/_export.js\");\n\nvar $filter = __webpack_require__(/*! ./_array-methods */ \"./node_modules/core-js/modules/_array-methods.js\")(2);\n\n$export($export.P + $export.F * !__webpack_require__(/*! ./_strict-method */ \"./node_modules/core-js/modules/_strict-method.js\")([].filter, true), 'Array', {\n  // 22.1.3.7 / 15.4.4.20 Array.prototype.filter(callbackfn [, thisArg])\n  filter: function filter(callbackfn\n  /* , thisArg */\n  ) {\n    return $filter(this, callbackfn, arguments[1]);\n  }\n});\n\n//# sourceURL=webpack:///./node_modules/core-js/modules/es6.array.filter.js?");
+
+/***/ }),
+
 /***/ "./node_modules/core-js/modules/es6.array.for-each.js":
 /*!************************************************************!*\
   !*** ./node_modules/core-js/modules/es6.array.for-each.js ***!
@@ -698,6 +687,17 @@ eval("\n\nvar addToUnscopables = __webpack_require__(/*! ./_add-to-unscopables *
 
 /***/ }),
 
+/***/ "./node_modules/core-js/modules/es6.object.define-property.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/core-js/modules/es6.object.define-property.js ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var $export = __webpack_require__(/*! ./_export */ \"./node_modules/core-js/modules/_export.js\"); // 19.1.2.4 / 15.2.3.6 Object.defineProperty(O, P, Attributes)\n\n\n$export($export.S + $export.F * !__webpack_require__(/*! ./_descriptors */ \"./node_modules/core-js/modules/_descriptors.js\"), 'Object', {\n  defineProperty: __webpack_require__(/*! ./_object-dp */ \"./node_modules/core-js/modules/_object-dp.js\").f\n});\n\n//# sourceURL=webpack:///./node_modules/core-js/modules/es6.object.define-property.js?");
+
+/***/ }),
+
 /***/ "./node_modules/core-js/modules/es6.object.keys.js":
 /*!*********************************************************!*\
   !*** ./node_modules/core-js/modules/es6.object.keys.js ***!
@@ -709,17 +709,6 @@ eval("// 19.1.2.14 Object.keys(O)\nvar toObject = __webpack_require__(/*! ./_to-
 
 /***/ }),
 
-/***/ "./node_modules/core-js/modules/es6.regexp.split.js":
-/*!**********************************************************!*\
-  !*** ./node_modules/core-js/modules/es6.regexp.split.js ***!
-  \**********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("// @@split logic\n__webpack_require__(/*! ./_fix-re-wks */ \"./node_modules/core-js/modules/_fix-re-wks.js\")('split', 2, function (defined, SPLIT, $split) {\n  'use strict';\n\n  var isRegExp = __webpack_require__(/*! ./_is-regexp */ \"./node_modules/core-js/modules/_is-regexp.js\");\n\n  var _split = $split;\n  var $push = [].push;\n  var $SPLIT = 'split';\n  var LENGTH = 'length';\n  var LAST_INDEX = 'lastIndex';\n\n  if ('abbc'[$SPLIT](/(b)*/)[1] == 'c' || 'test'[$SPLIT](/(?:)/, -1)[LENGTH] != 4 || 'ab'[$SPLIT](/(?:ab)*/)[LENGTH] != 2 || '.'[$SPLIT](/(.?)(.?)/)[LENGTH] != 4 || '.'[$SPLIT](/()()/)[LENGTH] > 1 || ''[$SPLIT](/.?/)[LENGTH]) {\n    var NPCG = /()??/.exec('')[1] === undefined; // nonparticipating capturing group\n    // based on es5-shim implementation, need to rework it\n\n    $split = function (separator, limit) {\n      var string = String(this);\n      if (separator === undefined && limit === 0) return []; // If `separator` is not a regex, use native split\n\n      if (!isRegExp(separator)) return _split.call(string, separator, limit);\n      var output = [];\n      var flags = (separator.ignoreCase ? 'i' : '') + (separator.multiline ? 'm' : '') + (separator.unicode ? 'u' : '') + (separator.sticky ? 'y' : '');\n      var lastLastIndex = 0;\n      var splitLimit = limit === undefined ? 4294967295 : limit >>> 0; // Make `global` and avoid `lastIndex` issues by working with a copy\n\n      var separatorCopy = new RegExp(separator.source, flags + 'g');\n      var separator2, match, lastIndex, lastLength, i; // Doesn't need flags gy, but they don't hurt\n\n      if (!NPCG) separator2 = new RegExp('^' + separatorCopy.source + '$(?!\\\\s)', flags);\n\n      while (match = separatorCopy.exec(string)) {\n        // `separatorCopy.lastIndex` is not reliable cross-browser\n        lastIndex = match.index + match[0][LENGTH];\n\n        if (lastIndex > lastLastIndex) {\n          output.push(string.slice(lastLastIndex, match.index)); // Fix browsers whose `exec` methods don't consistently return `undefined` for NPCG\n          // eslint-disable-next-line no-loop-func\n\n          if (!NPCG && match[LENGTH] > 1) match[0].replace(separator2, function () {\n            for (i = 1; i < arguments[LENGTH] - 2; i++) if (arguments[i] === undefined) match[i] = undefined;\n          });\n          if (match[LENGTH] > 1 && match.index < string[LENGTH]) $push.apply(output, match.slice(1));\n          lastLength = match[0][LENGTH];\n          lastLastIndex = lastIndex;\n          if (output[LENGTH] >= splitLimit) break;\n        }\n\n        if (separatorCopy[LAST_INDEX] === match.index) separatorCopy[LAST_INDEX]++; // Avoid an infinite loop\n      }\n\n      if (lastLastIndex === string[LENGTH]) {\n        if (lastLength || !separatorCopy.test('')) output.push('');\n      } else output.push(string.slice(lastLastIndex));\n\n      return output[LENGTH] > splitLimit ? output.slice(0, splitLimit) : output;\n    }; // Chakra, V8\n\n  } else if ('0'[$SPLIT](undefined, 0)[LENGTH]) {\n    $split = function (separator, limit) {\n      return separator === undefined && limit === 0 ? [] : _split.call(this, separator, limit);\n    };\n  } // 21.1.3.17 String.prototype.split(separator, limit)\n\n\n  return [function split(separator, limit) {\n    var O = defined(this);\n    var fn = separator == undefined ? undefined : separator[SPLIT];\n    return fn !== undefined ? fn.call(separator, O, limit) : $split.call(String(O), separator, limit);\n  }, $split];\n});\n\n//# sourceURL=webpack:///./node_modules/core-js/modules/es6.regexp.split.js?");
-
-/***/ }),
-
 /***/ "./node_modules/core-js/modules/web.dom.iterable.js":
 /*!**********************************************************!*\
   !*** ./node_modules/core-js/modules/web.dom.iterable.js ***!
@@ -728,18 +717,6 @@ eval("// @@split logic\n__webpack_require__(/*! ./_fix-re-wks */ \"./node_module
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("var $iterators = __webpack_require__(/*! ./es6.array.iterator */ \"./node_modules/core-js/modules/es6.array.iterator.js\");\n\nvar getKeys = __webpack_require__(/*! ./_object-keys */ \"./node_modules/core-js/modules/_object-keys.js\");\n\nvar redefine = __webpack_require__(/*! ./_redefine */ \"./node_modules/core-js/modules/_redefine.js\");\n\nvar global = __webpack_require__(/*! ./_global */ \"./node_modules/core-js/modules/_global.js\");\n\nvar hide = __webpack_require__(/*! ./_hide */ \"./node_modules/core-js/modules/_hide.js\");\n\nvar Iterators = __webpack_require__(/*! ./_iterators */ \"./node_modules/core-js/modules/_iterators.js\");\n\nvar wks = __webpack_require__(/*! ./_wks */ \"./node_modules/core-js/modules/_wks.js\");\n\nvar ITERATOR = wks('iterator');\nvar TO_STRING_TAG = wks('toStringTag');\nvar ArrayValues = Iterators.Array;\nvar DOMIterables = {\n  CSSRuleList: true,\n  // TODO: Not spec compliant, should be false.\n  CSSStyleDeclaration: false,\n  CSSValueList: false,\n  ClientRectList: false,\n  DOMRectList: false,\n  DOMStringList: false,\n  DOMTokenList: true,\n  DataTransferItemList: false,\n  FileList: false,\n  HTMLAllCollection: false,\n  HTMLCollection: false,\n  HTMLFormElement: false,\n  HTMLSelectElement: false,\n  MediaList: true,\n  // TODO: Not spec compliant, should be false.\n  MimeTypeArray: false,\n  NamedNodeMap: false,\n  NodeList: true,\n  PaintRequestList: false,\n  Plugin: false,\n  PluginArray: false,\n  SVGLengthList: false,\n  SVGNumberList: false,\n  SVGPathSegList: false,\n  SVGPointList: false,\n  SVGStringList: false,\n  SVGTransformList: false,\n  SourceBufferList: false,\n  StyleSheetList: true,\n  // TODO: Not spec compliant, should be false.\n  TextTrackCueList: false,\n  TextTrackList: false,\n  TouchList: false\n};\n\nfor (var collections = getKeys(DOMIterables), i = 0; i < collections.length; i++) {\n  var NAME = collections[i];\n  var explicit = DOMIterables[NAME];\n  var Collection = global[NAME];\n  var proto = Collection && Collection.prototype;\n  var key;\n\n  if (proto) {\n    if (!proto[ITERATOR]) hide(proto, ITERATOR, ArrayValues);\n    if (!proto[TO_STRING_TAG]) hide(proto, TO_STRING_TAG, NAME);\n    Iterators[NAME] = ArrayValues;\n    if (explicit) for (key in $iterators) if (!proto[key]) redefine(proto, key, $iterators[key], true);\n  }\n}\n\n//# sourceURL=webpack:///./node_modules/core-js/modules/web.dom.iterable.js?");
-
-/***/ }),
-
-/***/ "./src/renderer.js":
-/*!*************************!*\
-  !*** ./src/renderer.js ***!
-  \*************************/
-/*! exports provided: renderer */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"renderer\", function() { return renderer; });\n/* harmony import */ var core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! core-js/modules/es6.array.iterator */ \"./node_modules/core-js/modules/es6.array.iterator.js\");\n/* harmony import */ var core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_array_iterator__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var core_js_modules_es6_object_keys__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! core-js/modules/es6.object.keys */ \"./node_modules/core-js/modules/es6.object.keys.js\");\n/* harmony import */ var core_js_modules_es6_object_keys__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_object_keys__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! core-js/modules/web.dom.iterable */ \"./node_modules/core-js/modules/web.dom.iterable.js\");\n/* harmony import */ var core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_web_dom_iterable__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var core_js_modules_es6_array_for_each__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! core-js/modules/es6.array.for-each */ \"./node_modules/core-js/modules/es6.array.for-each.js\");\n/* harmony import */ var core_js_modules_es6_array_for_each__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_array_for_each__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var core_js_modules_es6_regexp_split__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! core-js/modules/es6.regexp.split */ \"./node_modules/core-js/modules/es6.regexp.split.js\");\n/* harmony import */ var core_js_modules_es6_regexp_split__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(core_js_modules_es6_regexp_split__WEBPACK_IMPORTED_MODULE_4__);\n\n\n\n\n\n\n/**\n * A number, or a string containing a number.\n * @typedef {Object} VNode\n * @property {string} nodeName\n * @property {Object.<string>} attributes\n * @property {Object} children\n */\n\n/**\n * This function transforms a virtual DOM tree into a DOM tree\n *\n * @param {VNode} vnode\n * @returns\n */\nfunction renderer(vnode) {\n  // creates a DOM element\n  if (vnode.split) return document.createTextNode(vnode);\n  var newElem = document.createElement(vnode.nodeName); // grabs and sets all attributes to the new DOM element\n\n  var attributes = vnode.attributes || {};\n  Object.keys(attributes).forEach(function (attr) {\n    newElem.setAttribute(attr, attributes[attr]);\n  }); // recursion for every fild it has\n\n  var children = vnode.children || [];\n  children.forEach(function (child) {\n    var childElem = renderer(child);\n    newElem.appendChild(childElem);\n  });\n  return newElem;\n}\n\n//# sourceURL=webpack:///./src/renderer.js?");
 
 /***/ })
 
